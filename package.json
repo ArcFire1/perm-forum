@@ -1,0 +1,40 @@
+{
+  "name": "boilerplate",
+  "version": "3.1.0",
+  "description": "Сборщик верстки.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "minify": "gulp minify"
+  },
+  "author": "Alexei Kyzovkin",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.5",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-less-glob": "^1.0.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-wait2": "^0.0.5",
+    "imagemin-pngquant": "^6.0.0",
+    "jquery": "~3.3.1",
+    "jstransformer-uglify-js": "^1.2.0",
+    "path": "^0.12.7",
+    "yargs": "^12.0.2"
+  }
+}
