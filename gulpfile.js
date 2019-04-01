@@ -65,8 +65,9 @@ let less = () => gulp.src(paths.src.css)
   outputStyle: 'compressed'
   }))
   .pipe(gulpAutoprefixer({
-  browsers: ['last 2 versions'],
-  cascade: false
+    grid: true,
+    browsers: ['last 2 versions'],
+    cascade: false
   }))
   .pipe(gulp.dest(paths.dist.css));
 

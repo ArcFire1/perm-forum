@@ -4,7 +4,7 @@ html.no-js(lang='ru')
   body
     header
       .userbar
-        .wrapper
+        .grid-container
           .userbar-right
             ul.userbar-login
               each i in ['Войти', 'Зарегистроваться']
@@ -13,9 +13,10 @@ html.no-js(lang='ru')
             ul.userbar-lang
               li.userbar-lang__item: a.userbar-lang__link.userbar-lang__link_active(href="#") Ru
               li.userbar-lang__item: a.userbar-lang__link(href="#") En
-      .wrapper.wrapper-header
+      .flex-header
         a(href="#"): img.logo(src="./images/logo.png" alt="logo")
-        .wrapper-side
+        
+        .flex-header-side
           .header-contacts
             p.header-contacts__text
               | Телефон горячей линии

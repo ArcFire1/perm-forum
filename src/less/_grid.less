@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-header {
+  display: flex;
+  align-items: flex-end;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 34px;
+
+  &-side {
+    width: calc(100% - 188px);
+  }
+}
