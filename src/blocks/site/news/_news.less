@@ -1,20 +1,35 @@
 .news {
-  display: grid;
-  grid-column-gap: 15px;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-  & .news-item {
+  &__elem {
+    width: 50%;
+
     &:first-child {
-      grid-row-start: 1;
-      grid-row-end: 4;
+      float: left;
+      width: 45%;
     }
 
     &:not(:first-child) {
+      float: right;
       .news-item__text {
         display: none;
       }
     }
+  }
+}
+
+.clearfix {
+  display: block;
+  zoom: 1;
+
+  &:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
   }
 }
