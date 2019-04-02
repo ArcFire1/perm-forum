@@ -1,0 +1,7 @@
+mixin organizator(logo, name, title, className)
+  .organizator(class=className)
+    img.organizator__logo(src=logo alt="logo")
+    .organizator__content
+      if title
+        h3.organizator__title=title
+      h4.organizator__name= name

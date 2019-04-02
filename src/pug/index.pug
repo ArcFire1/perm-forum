@@ -6,6 +6,8 @@ html.no-js(lang='ru')
     include ../blocks/site/news-item/_news-item
     include ../blocks/site/key-member/_key-member
     include ../blocks/site/widget-post/_widget-post
+    include ../blocks/site/organizator/_organizator
+    include ../blocks/site/partner/_partner
 
     header
       .userbar
@@ -100,6 +102,63 @@ html.no-js(lang='ru')
               | перечисления денежных средств на счет исполнителя.
       
       aside.sidebar-container.sidebar-container_low
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dicta!
+        h2.organizators-title Организаторы
+        .organizators
+          +organizator('./i/org-1.png', 'Правительство Пермского края', false, false)
+          +organizator('./i/org-2.png', 'Группа предприятий ОАО «ЛУКОЙЛ» в Пермском крае', false, false)
 
+        .organizators
+          +organizator('./i/org-3.png', 'Консалтинговая компания IRP Group', 'Оператор форума', 'organizator_main')
+    
+    section.partners
+      h2.partners-title Партнеры
+      .partners-wrapper
+        each i in [1,2]
+          - for (var x = 1; x < 10; x++)
+            +partner('./i/partners/partner-' + x +'.png')
+      .partners-expand      
+        button.partners-expand-button(type=button)
+
+    footer.footer
+      .footer-container
+        .footer-column
+          h4.footer-column-title О форуме
+          ul.footer-list
+            each i in ['Концепция', 'Организаторы', 'О Перми']
+              li.footer-list__item: a.footer-list__link(href="#")= i
+        .footer-column
+          h4.footer-column-title Программа
+          ul.footer-list
+            each i in ['18 апреля', '19 апреля', '20 апреля', '21 апреля']
+              li.footer-list__item: a.footer-list__link(href="#")= i
+        .footer-column
+          h4.footer-column-title Участники
+          ul.footer-list
+            each i in ['Аккредитация участников', 'Условия участия', 'Докладчики', 'Список участников']
+              li.footer-list__item: a.footer-list__link(href="#")= i
+        .footer-column
+          h4.footer-column-title Пресс-центр
+          ul.footer-list
+            each i in ['Новости', 'Пресс-релизы', 'Аккредитация СМИ']
+              li.footer-list__item: a.footer-list__link(href="#")= i
+        .footer-column
+          h4.footer-column-title Партнеры
+          ul.footer-list
+            each i in ['Партнеры форума', 'Возможности сотрудничества']
+              li.footer-list__item: a.footer-list__link(href="#")= i
+        .footer-column
+          h4.footer-column-title Контакты
+          ul.footer-list
+            each i in ['Контактная информация', 'Площадка форума', 'Команда проекта']
+              li.footer-list__item: a.footer-list__link(href="#")= i
+        
+      .footer-bottom
+        .footer-bottom__left
+          span.footer-bottom__copy &copy; 2012 Правительство Пермского края
+          ul.footer-soc
+            li.footer-soc__item: a.footer-soc__link(href="#"): img.footer-soc__icon(src="./i/facebook.png" alt="facebook")
+            li.footer-soc__item: a.footer-soc__link(href="#"): img.footer-soc__icon(src="./i/twitter.png" alt="twitter")
+        .footer-bottom__right
+          span.footer-bottom__maker Сделано в #[a.footer-bottom__link(href="#") Eastwood lab]    
+      
     include components/service/_js

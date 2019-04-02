@@ -122,5 +122,41 @@
       fade: true,
       cssEase: 'linear'
     });
+
+    // autoheight partners logo
+    function partnerHeight() {
+      $('.partner__logo').css("height", "auto");
+        var t = Math.max.apply(null, $('.partner__logo').map(function() {
+            return $(this).height()
+        }).get());
+      $('.partner__logo').height(t)
+    }
+
+    partnerHeight();
+
+    $(window).on('resize', function() {
+      partnerHeight();
+    });
+
+    const partnersWrapper = $('.partners-wrapper');
+
+    function calcPartnerHeight() {
+      let partnerItem = $('.partner').outerHeight();
+      partnersWrapper.css('height', partnerItem);
+    }
+
+    calcPartnerHeight();
+
+    $('.partners-expand-button').click(function() {
+      let partnerItem = $('.partner').outerHeight();
+
+      if (partnersWrapper.outerHeight() === partnerItem) {
+        partnersWrapper.css('height', '100%');
+        $(this).addClass('expanded');
+      } else {
+        partnersWrapper.css('height', partnerItem);
+        $(this).removeClass('expanded');
+      }
+    });
   });
 })(jQuery);

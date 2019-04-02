@@ -1,0 +1,19 @@
+@elems-in-line: 6;
+
+.partner {
+  display: block;
+  padding-bottom: 55px;
+  width: calc(100% / @elems-in-line);
+  text-align: center;
+
+  &__logo {
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    margin: 0;
+    color: #colors-palette[white];
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
