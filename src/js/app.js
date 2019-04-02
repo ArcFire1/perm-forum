@@ -15,7 +15,6 @@
       const viewportWidth = $(window).width();
       
       if(offsetRight > viewportWidth) {
-        console.log(11)
         const delta = offsetRight - viewportWidth
         offsetLeft = offsetLeft - delta;
       } 
@@ -25,7 +24,6 @@
 
     function render(){
       menuItems.each(function(index, elem){
-        console.log(elem);
         $(submenu[index]).css('left',  calculateOffset(elem, index));  
     });  
     }
@@ -114,5 +112,15 @@
       //rotator();
     }
     // slider end
+
+    //slick carousel
+    $(".key-members").slick({
+      infinite: true,
+      arrows: false,
+      dots: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear'
+    });
   });
 })(jQuery);

@@ -1,0 +1,31 @@
+.key-member {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+
+  &__photo {
+    display: block;
+    margin-right: 15px;
+    height: 100%;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #colors-palette[primary];
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      color: #colors-palette[alert];
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+}

@@ -9,6 +9,17 @@
   font-style: normal;
 }
 
+// Times New Roman Italic
+@font-face {
+  font-family: 'TimesNewRoman-webfont';
+  src: url('@{fontsPath}/TimesNewRomanPS-ItalicMT.eot');
+  src: url('@{fontsPath}/TimesNewRomanPS-ItalicMT.eot?#iefix') format('embedded-opentype'),
+  url('@{fontsPath}/TimesNewRomanPS-ItalicMT.woff') format('woff'),
+  url('@{fontsPath}/TimesNewRomanPS-ItalicMT.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  }
+
 // Times New Roman Bold
 @font-face {
   font-family: 'TimesNewRoman-webfont';
@@ -20,4 +31,4 @@
   font-style: normal;
 }
 
-@font-main: 'TimesNewRoman-webfont', 'Roboto', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+@font-main: 'TimesNewRoman-webfont', serif;

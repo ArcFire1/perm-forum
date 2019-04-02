@@ -4,6 +4,8 @@ html.no-js(lang='ru')
   body
     //- mixins
     include ../blocks/site/news-item/_news-item
+    include ../blocks/site/key-member/_key-member
+    include ../blocks/site/widget-post/_widget-post
 
     header
       .userbar
@@ -49,7 +51,55 @@ html.no-js(lang='ru')
         
         h2.heading Ключевые участники
         
+        .key-members
+          each i in [1,2,3]
+            .key-members-item
+              +key-member('./i/key-member-1.png')
+              +key-member('./i/key-member-2.png')
+              +key-member('./i/key-member-3.png')
+              +key-member('./i/key-member-4.png')
+
       aside.sidebar-container
+        .widget
+          h2.widget-title #[img.widget-icon(src="./i/facebook.png" alt="facebook")] Фейсбук
+          each i in [1,2]
+            +widget-post('11 д. назад')
+              | #[a.widget-post__link(href="#") Московский международный форум:] Алексей 
+              | Комиссаров, руководитель Департамента науки, 
+              | промышленной политики и предпринимательства 
+              | города Москвы: «Мы хотим выбрать одну из 
+              | московских улиц километра на два
+
+        .widget
+          h2.widget-title #[img.widget-icon(src="./i/twitter.png" alt="facebook")] Твиттер
+          each i in [1,2,3]
+            +widget-post('11 д. назад')
+              | #[a.widget-post__link(href="#") urbanforum_ru:] Сегодня 
+              | ULI #[a.widget-post__link(href="#") @UrbanLandIns] 
+              | международный партнер #[a.widget-post__link(href="#") #urbanforum]  празднует свое 
+              | 75-летие. Поздравляем!
+
+    .grid-container
+      .main-container.main-container_low      
+        .conditions
+          .conditions-head
+            h2.heading Условия участия
+            ul.conditions-links
+              li.conditions-links__item: a.conditions-links__link(href="#") Все условия
+              li.conditions-links__item #[a.conditions-links__link(href="#") Подать заявку] на участие в форуме
+          ol.conditions-list
+            li.conditions-list__item Заявку на участие можно направить в Дирекцию, заполнив регистрационную форму на сайте в разделе 
+              | «Зарегистрироваться» с 26 декабря 2011 года. Заявки на участие будут рассматриваться Дирекцией с 
+              | учетом Категорий лиц, участвующих в Пермском форуме 2012 без оплаты организационного взноса, и, 
+              | в случае утверждения, лицу, подавшему заявку, будет направлено письменное подтверждение на указанную 
+              | электронную почту.
+            li.conditions-list__item Участникам необходимо подтвердить свое согласие участия на сайте Форума в разделе «Зарегистрироваться».
+            li.conditions-list__item На каждого участника Форума заключается договор, являющийся подтверждением и гарантией участия.
+            li.conditions-list__item Стоимость участия составляет 30 000 руб. (в том числе НДС) при оплате участия до 1 апреля 2012 года и 
+              | 50 000 руб. (в том числе НДС) при оплате участия после 1 апреля 2012 года. Датой оплаты считается дата 
+              | перечисления денежных средств на счет исполнителя.
+      
+      aside.sidebar-container.sidebar-container_low
         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dicta!
 
     include components/service/_js

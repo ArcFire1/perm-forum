@@ -1,0 +1,29 @@
+.widget-post {
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+  &__text {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #colors-palette[dark-gray];
+  }
+
+  &__date {
+    font-size: 12px;
+    color: #colors-palette[medium-gray];
+    font-style: italic;
+  }
+
+  &__link {
+    color: #colors-palette[primary];
+
+    &:hover,
+    &:focus {
+      color: #colors-palette[alert];
+    }
+  }
+}

@@ -20,6 +20,10 @@ const imageminPngquant = require('imagemin-pngquant');
 
 let nameChosenPage = gulpArgs.pg || '*';
 
+const lessPaths = [
+  './node_modules/slick-carousel/slick/',
+];
+
 const paths = {
   dist: {
   html: 'dist/',
@@ -33,7 +37,8 @@ const paths = {
   html: 'src/pug/' + nameChosenPage + '.pug',
   js: 'src/js/*.js',
   jsLib: [
-    'node_modules/jquery/dist/jquery.min.js'
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/slick-carousel/slick/slick.min.js'
   ],
   css: ['src/less/style.less'],
   images: 'src/images/**/*.*',
@@ -62,7 +67,8 @@ let less = () => gulp.src(paths.src.css)
   .pipe(gulpPlumber())
   .pipe(gulpLessGlob())
   .pipe(gulpLess({
-  outputStyle: 'compressed'
+    includePaths: lessPaths,  
+    outputStyle: 'compressed'
   }))
   .pipe(gulpAutoprefixer({
     grid: true,
