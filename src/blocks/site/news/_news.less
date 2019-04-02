@@ -1,0 +1,20 @@
+.news {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  & .news-item {
+    &:first-child {
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+
+    &:not(:first-child) {
+      .news-item__text {
+        display: none;
+      }
+    }
+  }
+}

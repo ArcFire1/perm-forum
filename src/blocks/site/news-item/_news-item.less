@@ -1,0 +1,33 @@
+.news-item {
+  position: relative;
+
+  &__date {
+    display: block;
+    margin: 0 0 5px 0;
+    font-style: italic;
+    color: #colors-palette[medium-gray];
+  }
+
+  &__title {
+    display: block;
+    margin: 0 0 15px 0;
+    font-family: @font-main;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    color: #colors-palette[primary];
+
+    &:hover,
+    &:focus {
+      color: #colors-palette[alert]
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #colors-palette[darken-gray];
+  }
+}
