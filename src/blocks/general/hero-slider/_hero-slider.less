@@ -2,17 +2,22 @@
 
   &-wrapper {
     position: relative;
-    height: 400px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
   }
 
   &-item {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    padding: 23px 0;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    &:not(:first-child) {
-      display: none;
-    }
+    float: left;
+    z-index: 100;
   }
 
   &-controls {
@@ -24,6 +29,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    z-index: 1000;
 
     & li {
       &:not(:last-child) {
@@ -43,6 +49,22 @@
       &.active {
         background-color: #colors-palette[secondary];
       }
+    }
+  }
+}
+
+@media @medium-size {
+  .hero-slider {
+    &-item {
+      padding: 50px 0;
+    }
+  }
+}
+
+@media @small-size {
+  .hero-slider {
+    &-item {
+      padding: 0 0 50px 0;
     }
   }
 }

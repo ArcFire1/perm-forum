@@ -10,6 +10,7 @@
   &__logo {
     flex: 0 0 auto;
     margin-right: 5px;
+    max-width: 52px;
   }
 
   &__title {
@@ -29,10 +30,27 @@
   &_main {
     .organizator__logo {
       margin-right: 15px;
+      max-width: 121px;
     }
 
     .organizator__name {
       max-width: 120px;
     }
+  }
+}
+
+@media @medium-size {
+  .organizator {
+    margin-bottom: 15px;
+
+    &__name {
+      max-width: 100%;
+    }
+  }
+}
+
+@media @small-size {
+  .organizator {
+    margin-right: 15px;
   }
 }

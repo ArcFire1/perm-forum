@@ -33,3 +33,23 @@
     visibility: hidden;
   }
 }
+
+@media @small-size {
+  .news {
+    &__elem {
+      width: 100%;
+  
+      &:first-child {
+        float: none;
+        width: 100%;
+      }
+  
+      &:not(:first-child) {
+        float: none;
+        .news-item__text {
+          display: none;
+        }
+      }
+    }
+  }
+}

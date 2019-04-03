@@ -9,36 +9,7 @@ html.no-js(lang='ru')
     include ../blocks/site/organizator/_organizator
     include ../blocks/site/partner/_partner
 
-    header
-      .userbar
-        .grid-container
-          .userbar-right
-            ul.userbar-login
-              each i in ['Войти', 'Зарегистроваться']
-                li.userbar-login__item: a.userbar-login__link(href="#")= i
-
-            ul.userbar-lang
-              li.userbar-lang__item: a.userbar-lang__link.userbar-lang__link_active(href="#") Ru
-              li.userbar-lang__item: a.userbar-lang__link(href="#") En
-      .flex-header
-        a(href="#"): img.logo(src="./images/logo.png" alt="logo")
-
-        .flex-header-side
-          .header-contacts
-            p.header-contacts__text
-              | Телефон горячей линии
-              span.header-contacts__span звонок по России бесплатный
-            a.header-contacts__tel(href="tel:+88005557363") 8 800 555-73-63
-
-          nav
-            ul.menu
-              each item in ['О форуме', 'Программа', 'Участники', 'Пресс-центр', 'Партнеры', 'О Перми', 'Контакты']
-                li.menu__item
-                  a.menu__link(href="#")= item
-                  .wrapper
-                    ul.submenu
-                      each item in ['Новости', 'Пресс-релизы', 'Аккредитация СМИ']
-                        li.submenu__item: a.submenu__link(href="#")= item
+    include components/common/_header
     
     include ../blocks/general/hero-slider/_hero-slider
 
@@ -119,46 +90,6 @@ html.no-js(lang='ru')
       .partners-expand      
         button.partners-expand-button(type=button)
 
-    footer.footer
-      .footer-container
-        .footer-column
-          h4.footer-column-title О форуме
-          ul.footer-list
-            each i in ['Концепция', 'Организаторы', 'О Перми']
-              li.footer-list__item: a.footer-list__link(href="#")= i
-        .footer-column
-          h4.footer-column-title Программа
-          ul.footer-list
-            each i in ['18 апреля', '19 апреля', '20 апреля', '21 апреля']
-              li.footer-list__item: a.footer-list__link(href="#")= i
-        .footer-column
-          h4.footer-column-title Участники
-          ul.footer-list
-            each i in ['Аккредитация участников', 'Условия участия', 'Докладчики', 'Список участников']
-              li.footer-list__item: a.footer-list__link(href="#")= i
-        .footer-column
-          h4.footer-column-title Пресс-центр
-          ul.footer-list
-            each i in ['Новости', 'Пресс-релизы', 'Аккредитация СМИ']
-              li.footer-list__item: a.footer-list__link(href="#")= i
-        .footer-column
-          h4.footer-column-title Партнеры
-          ul.footer-list
-            each i in ['Партнеры форума', 'Возможности сотрудничества']
-              li.footer-list__item: a.footer-list__link(href="#")= i
-        .footer-column
-          h4.footer-column-title Контакты
-          ul.footer-list
-            each i in ['Контактная информация', 'Площадка форума', 'Команда проекта']
-              li.footer-list__item: a.footer-list__link(href="#")= i
-        
-      .footer-bottom
-        .footer-bottom__left
-          span.footer-bottom__copy &copy; 2012 Правительство Пермского края
-          ul.footer-soc
-            li.footer-soc__item: a.footer-soc__link(href="#"): img.footer-soc__icon(src="./i/facebook.png" alt="facebook")
-            li.footer-soc__item: a.footer-soc__link(href="#"): img.footer-soc__icon(src="./i/twitter.png" alt="twitter")
-        .footer-bottom__right
-          span.footer-bottom__maker Сделано в #[a.footer-bottom__link(href="#") Eastwood lab]    
+    include components/common/_footer  
       
     include components/service/_js

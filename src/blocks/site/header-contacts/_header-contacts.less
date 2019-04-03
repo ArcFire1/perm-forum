@@ -25,3 +25,27 @@
     text-decoration: none;
   }
 }
+
+@media @medium-size {
+  .header-contacts {
+    margin-bottom: 0;
+  }
+}
+
+@media @small-size {
+  .header-contacts {
+    margin-right: 0;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+
+    &__tel {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+header
+  .userbar
+    .grid-container
+      .userbar-right
+        ul.userbar-login
+          each i in ['Войти', 'Зарегистроваться']
+            li.userbar-login__item: a.userbar-login__link(href="#")= i
+        ul.userbar-lang
+          li.userbar-lang__item: a.userbar-lang__link.userbar-lang__link_active(href="#") Ru
+          li.userbar-lang__item: a.userbar-lang__link(href="#") En
+  .flex-header
+    a(href="#"): img.logo(src="./images/logo.png" alt="logo")
+    .flex-header-side
+      .header-contacts
+        p.header-contacts__text
+          | Телефон горячей линии
+          span.header-contacts__span звонок по России бесплатный
+        a.header-contacts__tel(href="tel:+88005557363") 8 800 555-73-63
+      nav.menu-wrapper
+        button.menu-toggler(type=button): span.menu-toggler__line
+        ul.menu
+          each item in ['О форуме', 'Программа', 'Участники', 'Пресс-центр', 'Партнеры', 'О Перми', 'Контакты']
+            li.menu__item
+              a.menu__link(href="#")= item
+              .wrapper
+                ul.submenu
+                  each item in ['Новости', 'Пресс-релизы', 'Аккредитация СМИ']
+                    li.submenu__item: a.submenu__link(href="#")= item
+              

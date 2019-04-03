@@ -1,15 +1,27 @@
 .hero-slider-wrapper
   .hero-slider
-    .hero-slider-item(style="background-image: url(./i/slide-1.jpg)")
-      .hero
-        h2.hero-title Гражданская повестка для тех, кто хочет жить и работать в России
-        .hero-card
-          .hero-card__head
-            img.hero-card__image(src="./i/hero-1.png" alt="hero")
-            .hero-card__title
-              p.hero-card__name Олег Чиркунов
-              p.hero-card__position Губернатор Пермского края
-          .hero-card__content
-            p.hero-card__text Уважаемые коллеги! Каждый регион, желающий стать успешным, формулирует свою цель и пути ее достижения. Мы обозначили два стратегических ориентира, которые будут способствовать #[a.hero-card__link(href="#") развитию Пермского края.]
-    .hero-slider-item(style="background-image: url(./i/slide-2.jpg)")
-      h1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, natus quae temporibus corporis sapiente repellendus dolores. Recusandae quaerat quas assumenda!          
+    each i in[1,2]
+      .hero-slider-item(style="background-image: url(./i/slide-1.jpg)")
+        .hero
+          h2.hero-title Гражданская повестка для тех, кто хочет жить и работать в России
+          .hero-card
+            .hero-card__head
+              img.hero-card__image(src="./i/hero-1.png" alt="hero")
+              .hero-card__title
+                p.hero-card__name Олег Чиркунов
+                p.hero-card__position Губернатор Пермского края
+            .hero-card__content
+              p.hero-card__text Уважаемые коллеги! Каждый регион, желающий стать успешным, формулирует свою цель и пути ее достижения. Мы обозначили два стратегических ориентира, которые будут способствовать #[a.hero-card__link(href="#") развитию Пермского края.]
+      
+      .hero-slider-item(style="background-image: url(./i/slide-2.jpg)")
+        .hero
+          h2.hero-title Гражданская повестка для тех, кто хочет жить и работать в России
+          .hero-card
+            .hero-card__head
+              img.hero-card__image(src="./i/hero-1.png" alt="hero")
+              .hero-card__title
+                p.hero-card__name Олег Чиркунов
+                p.hero-card__position Губернатор Пермского края
+            .hero-card__content
+              p.hero-card__text Уважаемые коллеги! Каждый регион, желающий стать успешным, формулирует свою цель и пути ее достижения. Мы обозначили два стратегических ориентира, которые будут способствовать #[a.hero-card__link(href="#") развитию Пермского края.]
+      

@@ -105,3 +105,50 @@
     }
   }
 }
+
+@media @medium-size {
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &-container {
+      flex-wrap: wrap;
+    }
+
+    &-column {
+      width: calc(100% / 3);
+    }
+  }
+}
+
+@media @medium-size {
+  .footer {
+    &-column {
+      width: calc(100% / 2);
+    }
+
+    &-bottom {
+      flex-direction: column;
+      
+      &__left {
+        display: flex;
+        align-items: center;
+      }
+    }
+  
+    &-soc {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+      &__item {
+        display: inline-block;
+      }
+  
+      &__link {
+        border: none;
+      }
+    }
+  }
+}

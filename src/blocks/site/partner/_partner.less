@@ -17,3 +17,30 @@
     line-height: 18px;
   }
 }
+
+@media @medium-size {
+  @elems-in-line: 3;
+
+  .partner {
+    width: calc(100% / @elems-in-line);
+  }
+}
+
+@media @small-size {
+  @elems-in-line: 2;
+
+  .partner {
+    text-align: center;
+    width: calc(100% / @elems-in-line);
+
+    &__logo img {
+      max-width: 80%;
+    }
+
+    &__name {
+      display: block;
+      margin: 0 auto;
+      max-width: 80%;
+    }
+  }
+}
